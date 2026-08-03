@@ -1,12 +1,12 @@
-# 🎡 Rueda de Citas
+# 🎡 Ruleta de Citas
 
-Una ruleta de actividades para planear citas con esa persona especial. Girás la rueda, cae en una actividad y listo: plan decidido.
+Una ruleta de actividades para planear citas con esa persona especial. Girás la ruleta, cae en una actividad y listo: plan decidido.
 
 ## Archivos
 
 - `index.html` – la página.
 - `styles.css` – el diseño (estética de boletería de carnaval).
-- `script.js` – la lógica de la rueda y de la lista de actividades.
+- `script.js` – la lógica de la ruleta y de la lista de actividades.
 - `activities.json` – **la "base de datos"**: la lista original de actividades que se carga la primera vez que alguien abre la página.
 
 ## Cómo funciona la "base de datos"
@@ -51,4 +51,4 @@ Ojo: si alguien ya usó la página antes en su navegador, su lista quedó guarda
 ## Personalización rápida
 
 - Colores y tipografías: todo está definido como variables al principio de `styles.css` (`:root { ... }`).
-- Cantidad de vueltas del giro, colores de los sectores de la rueda: al principio de `script.js` (`SEGMENT_COLORS`).
+- Cantidad de vueltas del giro, colores de los sectores de la ruleta: al principio de `script.js` (`SEGMENT_COLORS`).
