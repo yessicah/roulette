@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rueda de Citas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="marquee">
+    <h1>🎡 Rueda de Citas</h1>
+    <span class="ticket-tag">un boleto, una aventura</span>
+  </header>
+
+  <main>
+    <section class="wheel-section">
+      <div class="wheel-frame">
+        <svg class="pointer" viewBox="0 0 46 56" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23 56 L2 14 Q23 26 44 14 Z" fill="#e14f3d" stroke="#fff6e9" stroke-width="3"/>
+        </svg>
+        <div class="wheel-canvas-wrap">
+          <canvas id="wheel" width="600" height="600"></canvas>
+        </div>
+        <div class="hub">🎟️</div>
+      </div>
+
+      <button id="spinBtn" class="spin-btn">¡Girar la ruleta!</button>
+      <p class="hint" id="hint">Agregá al menos 2 actividades para poder girar.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Actividades en juego</h2>
+      <p class="subtext">Agregá, quitá o reordená los planes que quieren tener. Esta lista es la que gira en la rueda.</p>
+
+      <ul class="ticket-list" id="ticketList"></ul>
+
+      <form class="add-row" id="addForm">
+        <input
+          type="text"
+          id="newActivity"
+          placeholder="Ej: Ver el atardecer en la terraza"
+          maxlength="80"
+          autocomplete="off"
+        />
+        <button type="submit">Agregar</button>
+      </form>
+
+      <div class="panel-footer">
+        <button class="ghost-btn" id="exportBtn" type="button">⬇ Exportar lista (JSON)</button>
+        <button class="ghost-btn" id="resetBtn" type="button">↺ Restablecer lista original</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>Hecho para ustedes dos. Los cambios se guardan en este navegador.</footer>
+
+  <div class="modal-overlay" id="winnerModal" hidden>
+    <div class="modal-card">
+      <p class="eyebrow">🎉 BOLETO GANADOR 🎉</p>
+      <h3 id="winnerText"></h3>
+      <div class="modal-actions">
+        <button class="primary" id="doneBtn">Marcar como hecha y quitar</button>
+        <button class="secondary" id="spinAgainBtn">Girar de nuevo</button>
+        <button class="tertiary" id="closeModalBtn">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
